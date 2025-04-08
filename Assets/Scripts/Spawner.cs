@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
     int spawnID = -1;
     public Tilemap spawnTilemap;
     float towerCooldown;
-
+    Towers towers;
     void Update()
     {
         if(CanSpawn())
@@ -85,6 +85,10 @@ public class Spawner : MonoBehaviour
     {
         GameObject tower = Instantiate(towerPrefabs[spawnID], spawnTower);
         tower.transform.position = position;
+        Vector3Int cellPos = spawnTilemap.WorldToCell(position);
+        towers = tower.GetComponent<Towers>();
+        towers.cellPos = cellPos;
+        towers.tilemap = spawnTilemap;
         DeselectTower(); 
     }
 
@@ -100,7 +104,6 @@ public class Spawner : MonoBehaviour
     }
     public void SelectTower(int id)
     {
-
         DeselectTower();
         spawnID = id;
         towerUI[spawnID].color = Color.white;

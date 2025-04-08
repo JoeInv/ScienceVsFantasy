@@ -23,11 +23,14 @@ public class Enemy : MonoBehaviour
 
     void InflictDamage()
     {
+        if (detectedTower == null)
+        return;
         bool towerDied = detectedTower.LoseHealth(damage);
         detectedTower.GetComponent<SpriteRenderer>().color=Color.red;
         if(towerDied)
         {
             detectedTower = null;
+            if (attackOrder != null)
             StopCoroutine(attackOrder);
         }
     }
@@ -35,8 +38,11 @@ public class Enemy : MonoBehaviour
     {
         while (true)
         {
+            if (detectedTower == null)
+            yield break;
             InflictDamage();
             yield return new WaitForSeconds(1f);
+            if (detectedTower != null)
             detectedTower.GetComponent<SpriteRenderer>().color=Color.white;
             yield return new WaitForSeconds(attackInterval);
         }
@@ -72,6 +78,7 @@ public class Enemy : MonoBehaviour
         if(collision.tag == "Tower")
         {
             detectedTower = collision.GetComponent<Towers>();
+            if (attackOrder == null)
             attackOrder = StartCoroutine(Attack());
         }
         if(collision.tag == "Die")
