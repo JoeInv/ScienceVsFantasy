@@ -1,54 +1,48 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
+using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject draggingObj;
-    public GameObject currContainer;
-    public float playerEnergy = 100f;
-    public TMP_Text energyText;
-
     public static GameManager instance;
+    public Spawner spawner;
+    public int towerID;
+    public int towerCost;
+    public TMP_Text towerCostText;
+    public TMP_Text waveText;
+    public EnergySys energy;
 
-    private void Awake()
+    void Awake()
     {
-        instance = this;
-    }
 
-    private void Start()
-    {
-        UpdateEnergy();
-    }
-
-    public bool CanAfford(float cost)
-    {
-        return playerEnergy >= cost;
-    }
-
-    public void SpendEnergy(float cost)
-    {
-        playerEnergy -= cost;
-        Debug.Log(playerEnergy);
-    }
-
-    public void UpdateEnergy()
-    {
-        energyText.text = "Energy:\n" + playerEnergy.ToString();
-    }
-
-    public void PlaceObject(float towerCost)
-    {
-        if (draggingObj != null && currContainer != null)
-        {
-            if (CanAfford(towerCost))
-            {
-                Instantiate(draggingObj.GetComponent<TowerDragging>().card.objectGame, currContainer.transform);
-                currContainer.GetComponent<TowerContainers>().isFull = true;
-                SpendEnergy(towerCost);
-                UpdateEnergy();
-            }
+        if(instance == null)
+        {   
+            instance = this;
+            DontDestroyOnLoad(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
+
     }
+
+    void Start()
+    {
+        StartCoroutine(WaveStartDelay());
+    }
+    IEnumerator WaveStartDelay()
+    {
+        waveText.enabled = true;
+        waveText.text = "Enemies approaching soon...";
+        yield return new WaitForSeconds(12f);
+        waveText.text = "Here they come";
+        yield return new WaitForSeconds(3f);
+        waveText.enabled = false;
+        EnemySpawner.instance.StartSpawning();
+    }
+
 }

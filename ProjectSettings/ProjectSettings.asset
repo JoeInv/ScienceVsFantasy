@@ -4,7 +4,7 @@
 PlayerSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 26
-  productGUID: a40a29e331a484748a684c9e2c8169b3
+  productGUID: af0b49b277ef77b4f9971862d5d069e8
   AndroidProfiler: 0
   AndroidFilterTouchesWhenObscured: 0
   AndroidEnableSustainedPerformanceMode: 0
@@ -13,7 +13,7 @@ PlayerSettings:
   useOnDemandResources: 0
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: Science vs Fantasy
+  productName: ScienceVsFantasyV2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.13725491, g: 0.12156863, b: 0.1254902, a: 1}
@@ -594,14 +594,14 @@ PlayerSettings:
   apiCompatibilityLevelPerPlatform: {}
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
-  metroPackageName: Science vs Fantasy
+  metroPackageName: ScienceVsFantasyV2
   metroPackageVersion: 
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
   metroCertificateIssuer: 
   metroCertificateNotAfter: 0000000000000000
-  metroApplicationDescription: Science vs Fantasy
+  metroApplicationDescription: ScienceVsFantasyV2
   wsaImages: {}
   metroTileShortName: 
   metroTileShowName: 0
@@ -670,10 +670,10 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 0
   windowsGamepadBackendHint: 0
-  cloudProjectId: 41d4e1f8-f683-4ac0-9d0e-97b95d5f7349
+  cloudProjectId: 2c579fb1-a106-4c5d-b6f0-be229c860379
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: Science vs Fantasy
+  projectName: ScienceVsFantasyV2
   organizationId: joeinv
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
