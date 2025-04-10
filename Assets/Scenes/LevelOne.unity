@@ -1540,11 +1540,13 @@ MonoBehaviour:
   - {fileID: 8786163229623372444, guid: 7374edb23a7dd624585429e74f2151b1, type: 3}
   - {fileID: 698329766045643214, guid: e7ca5af3362357e45ad826ed6673ef70, type: 3}
   - {fileID: 1714930057429212501, guid: e3a427ce908dce64580f768d86206abc, type: 3}
+  - {fileID: 2861738001068338058, guid: 46835d3b2d4f6184388e8accd3294d65, type: 3}
   spawnTower: {fileID: 56138177}
   towerUI:
   - {fileID: 509521906}
   - {fileID: 534180752}
   - {fileID: 221254611}
+  - {fileID: 1481253786}
   spawnTilemap: {fileID: 1663647803}
 --- !u!4 &749865741
 Transform:
@@ -1663,6 +1665,7 @@ GameObject:
   - component: {fileID: 860782004}
   - component: {fileID: 860782006}
   - component: {fileID: 860782005}
+  - component: {fileID: 860782007}
   m_Layer: 5
   m_Name: T4Cost
   m_TagString: Untagged
@@ -1786,6 +1789,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 860782003}
   m_CullTransparentMesh: 1
+--- !u!114 &860782007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 860782003}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b42ca220c20a1e34297495d01efa886e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  towerID: 3
+  towerCost: 0
+  towerCostText: {fileID: 860782005}
 --- !u!1 &1048788088
 GameObject:
   m_ObjectHideFlags: 0
@@ -2415,11 +2433,11 @@ RectTransform:
   - {fileID: 1481279583}
   m_Father: {fileID: 2092938978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -333.88, y: 189.41998}
-  m_SizeDelta: {x: -674.54, y: -385.58}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 0, y: 1}
+  m_AnchoredPosition: {x: 3.3899841, y: -3.369995}
+  m_SizeDelta: {x: 118.62, y: 53.38}
+  m_Pivot: {x: 0, y: 1}
 --- !u!114 &1431382870
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2525,16 +2543,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5849056, g: 0.55510855, b: 0.55510855, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 7510520962302932213, guid: 814c12120dde2334da644c06eed2eac1, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -2574,7 +2592,7 @@ MonoBehaviour:
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
+            m_IntArgument: 3
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
