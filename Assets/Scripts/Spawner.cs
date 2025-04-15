@@ -7,14 +7,11 @@ using Image = UnityEngine.UI.Image;
 
 public class Spawner : MonoBehaviour
 {
-    public SpriteRenderer testSprite;
-    public List<GameObject> towerPrefabs;
+    public List<GameObject> towerPrefabs; //List of the actual Towers
     public Transform spawnTower;
-    public List<Image> towerUI;
-
-    int spawnID = -1;
+    public List<Image> towerUI; //List of Tower Images 
+    int spawnID = -1; //resets spawnID
     public Tilemap spawnTilemap;
-    float towerCooldown;
     Towers towers;
     void Update()
     {
@@ -31,12 +28,21 @@ public class Spawner : MonoBehaviour
 
     IEnumerator Cooldown(int towerID)
     {
-        //Disables the tower UI in game so the player can't buy till the cooldown is over
-        //May add cooldown timer in the future so the player has a better idea
-        towerCooldown = towerPrefabs[towerID].GetComponent<Towers>().buyCooldown;
-        towerUI[towerID].enabled = false;
-        yield return new WaitForSeconds(towerCooldown);
-        towerUI[towerID].enabled = true;
+        float towerCooldown = towerPrefabs[towerID].GetComponent<Towers>().buyCooldown;
+        towerUI[towerID].raycastTarget = false; //Disables the button
+        Color iconColor = towerUI[towerID].color;
+        float timer = 0f;
+        while (timer < towerCooldown) //Tower slowly fades back in over the cooldown duration
+        {
+            float alpha = timer / towerCooldown;
+            towerUI[towerID].color = new Color(iconColor.r, iconColor.g, iconColor.b, alpha);
+            timer += Time.deltaTime;
+            yield return null;
+        }
+        //Resets the color of the icon to normal to be safe
+        iconColor.a = 1f;
+        towerUI[towerID].color = iconColor;
+        towerUI[towerID].raycastTarget = true; //Renables button
     }
 
     void DetectSpawnPoint()
@@ -53,10 +59,10 @@ public class Spawner : MonoBehaviour
                 int towerCost = TowerCost(spawnID);
                 if(GameManager.instance.energy.EnoughEnergy(towerCost))
                 {
-                    GameManager.instance.energy.Use(towerCost);
+                    GameManager.instance.energy.Use(towerCost); //Subtracts the cost of the tower from the energy
                     int towerID = spawnID; //Need to store since SpawnTower deselects afterwards
                     SpawnTower(cellPosCentered);
-                    spawnTilemap.SetColliderType(cellPosDefault,Tile.ColliderType.None);
+                    spawnTilemap.SetColliderType(cellPosDefault,Tile.ColliderType.None); //Sets collider to none so nothing else is placed
                     StartCoroutine(Cooldown(towerID)); 
                 }
                 else

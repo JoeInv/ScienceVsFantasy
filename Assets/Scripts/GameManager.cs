@@ -36,6 +36,7 @@ public class GameManager : MonoBehaviour
     }
     IEnumerator WaveStartDelay()
     {
+        //Gives player prep time before the enemies start to spawn
         waveText.enabled = true;
         waveText.text = "Enemies approaching soon...";
         yield return new WaitForSeconds(12f);

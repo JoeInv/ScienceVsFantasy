@@ -24,6 +24,7 @@ public class PlasmaTower : Towers
 
     void ShootItem()
     {
+        //Spawns the laser in front of the Plasma tower
         GameObject itemShot = Instantiate(blastPrefab, transform);
         SoundManager.instance.PlasmaBlast();
         itemShot.GetComponent<PlasmaBlast>().Init(actionVal);

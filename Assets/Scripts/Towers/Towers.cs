@@ -26,8 +26,9 @@ public class Towers : MonoBehaviour
         return false;
     }
 
-    void RestoreTile()
+    public void RestoreTile()
     {
+        //Resets tile to Sprite so towers can be placed again
         if (tilemap != null)
         {
             tilemap.SetColliderType(cellPos, Tile.ColliderType.Sprite);
