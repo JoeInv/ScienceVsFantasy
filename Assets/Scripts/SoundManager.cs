@@ -32,7 +32,16 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
-
+    public void MuteSFX()
+    {
+        sfxSource.mute = !sfxSource.mute;
+        TowerSelect();
+    }
+    public void MuteMusic()
+    {
+        musicSource.mute = !musicSource.mute;
+        TowerSelect();
+    }
     public void PlasmaBlast()
     {
         sfxSource.PlayOneShot(plasmaTowerShoot, 0.15f);
