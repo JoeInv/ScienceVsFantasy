@@ -89,6 +89,7 @@ public class Spawner : MonoBehaviour
         towers = tower.GetComponent<Towers>();
         towers.cellPos = cellPos;
         towers.tilemap = spawnTilemap;
+        SoundManager.instance.TowerPlace();
         DeselectTower(); 
     }
 
@@ -106,6 +107,7 @@ public class Spawner : MonoBehaviour
     {
         DeselectTower();
         spawnID = id;
+        SoundManager.instance.TowerSelect();
         towerUI[spawnID].color = Color.white;
     }
 

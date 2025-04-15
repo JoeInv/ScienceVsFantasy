@@ -25,6 +25,7 @@ public class PlasmaTower : Towers
     void ShootItem()
     {
         GameObject itemShot = Instantiate(blastPrefab, transform);
+        SoundManager.instance.PlasmaBlast();
         itemShot.GetComponent<PlasmaBlast>().Init(actionVal);
     }
 

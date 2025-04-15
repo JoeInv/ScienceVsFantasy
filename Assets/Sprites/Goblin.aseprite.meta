@@ -123,14 +123,14 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Goblin
     originalName: 
-    pivot: {x: 0.47619048, y: 0.6542056}
+    pivot: {x: 0.4923077, y: 0.6542056}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 4
-      width: 63
+      y: 231
+      width: 65
       height: 107
     spriteID: 2cdf66cd426174d4ab8c3c27d1c30f5b
     spriteBone: []
@@ -140,18 +140,18 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 4}
+    uvTransform: {x: 4, y: 231}
   - name: Goblin_Frame_1
     originalName: 
-    pivot: {x: 0.47619048, y: 0.6542056}
+    pivot: {x: 0.5, y: 0.6571429}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
       serializedVersion: 2
       x: 4
-      y: 119
-      width: 63
-      height: 107
+      y: 4
+      width: 70
+      height: 105
     spriteID: c090ca9dc0f39c54eb8973df7b67836f
     spriteBone: []
     spriteOutline: []
@@ -160,7 +160,67 @@ ScriptedImporter:
     indices: 
     edges: []
     tessellationDetail: 0
-    uvTransform: {x: 4, y: 119}
+    uvTransform: {x: 4, y: 4}
+  - name: Goblin_Frame_2
+    originalName: 
+    pivot: {x: 0.4923077, y: 0.6542056}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 346
+      width: 65
+      height: 107
+    spriteID: 2d7b629f9de96974998487dc6d32ee51
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 346}
+  - name: Goblin_Frame_3
+    originalName: 
+    pivot: {x: 0.5441177, y: 0.6603774}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 117
+      width: 68
+      height: 106
+    spriteID: 003be3b11628ae74da48c97b787e123e
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 4, y: 117}
+  - name: Goblin_Frame_4
+    originalName: 
+    pivot: {x: 0.5333333, y: 0.6542056}
+    alignment: 9
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 82
+      y: 4
+      width: 60
+      height: 107
+    spriteID: c88a0a36650a98749b6ffc5c107d462d
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    uvTransform: {x: 82, y: 4}
   spriteSheetImportData: []
   asepriteLayers:
   - layerIndex: 0
@@ -173,19 +233,43 @@ ScriptedImporter:
     - name: Goblin_Frame_0
       frameIndex: 0
       cellRect:
-        x: 40
+        x: 38
         y: 0
-        width: 63
+        width: 65
         height: 107
       spriteId: 2cdf66cd426174d4ab8c3c27d1c30f5b
     - name: Goblin_Frame_1
       frameIndex: 1
       cellRect:
-        x: 40
-        y: 0
-        width: 63
-        height: 107
+        x: 35
+        y: 1
+        width: 70
+        height: 105
       spriteId: c090ca9dc0f39c54eb8973df7b67836f
+    - name: Goblin_Frame_2
+      frameIndex: 2
+      cellRect:
+        x: 38
+        y: 0
+        width: 65
+        height: 107
+      spriteId: 2d7b629f9de96974998487dc6d32ee51
+    - name: Goblin_Frame_3
+      frameIndex: 3
+      cellRect:
+        x: 33
+        y: 0
+        width: 68
+        height: 106
+      spriteId: 003be3b11628ae74da48c97b787e123e
+    - name: Goblin_Frame_4
+      frameIndex: 4
+      cellRect:
+        x: 38
+        y: 0
+        width: 60
+        height: 107
+      spriteId: c88a0a36650a98749b6ffc5c107d462d
     linkedCells: []
     parentIndex: -1
   platformSettings:

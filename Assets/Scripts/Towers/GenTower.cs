@@ -18,6 +18,7 @@ public class GenTower : Towers
         {
         yield return new WaitForSeconds(interval);
         AddEnergy();
+        SoundManager.instance.EnergyGenerated();
         }
     }
 

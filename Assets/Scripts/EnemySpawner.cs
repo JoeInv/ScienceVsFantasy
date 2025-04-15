@@ -32,6 +32,7 @@ public class EnemySpawner : MonoBehaviour
 
     void SpawnEnemy()
     {
+        SoundManager.instance.EnemySpawned();
         //Spawns random enemy at one of the 6 random spawn points
         int randomPrefabID = Random.Range(0, prefabs.Count); 
         int randomSpawnPointID = Random.Range(0, spawnPoints.Count);

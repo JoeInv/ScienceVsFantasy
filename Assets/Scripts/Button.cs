@@ -27,6 +27,7 @@ public class Button : MonoBehaviour
         if (collision.CompareTag("Enemy"))
         {
             Debug.Log("Activated");
+            SoundManager.instance.ButtonActivated();
             spriteRenderer.sprite = deactivated;
             isDeactivated = true;
             StartCoroutine(ActivateLaser());
@@ -40,6 +41,7 @@ public class Button : MonoBehaviour
         Debug.Log("Coords locked");
         laser = Instantiate(laserPrefab, laserSpawn, Quaternion.identity);
         Debug.Log("Fired");
+        SoundManager.instance.CrazyLaser();
         yield return new WaitForSeconds(duration);
         Destroy(laser);
 

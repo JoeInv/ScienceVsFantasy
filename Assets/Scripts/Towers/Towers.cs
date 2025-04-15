@@ -16,6 +16,7 @@ public class Towers : MonoBehaviour
     public virtual bool LoseHealth(int val)
     {
         health -= val;
+        SoundManager.instance.TowerHit();
         if(health<= 0)
         {
             RestoreTile();
