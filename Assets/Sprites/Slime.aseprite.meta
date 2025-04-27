@@ -35,7 +35,7 @@ ScriptedImporter:
     spriteMeshType: 1
     alignment: 0
     spritePivot: {x: 0.5, y: 0.5}
-    spritePixelsToUnits: 100
+    spritePixelsToUnits: 140
     spriteBorder: {x: 0, y: 0, z: 0, w: 0}
     spriteGenerateFallbackPhysicsShape: 0
     generateCubemap: 6
@@ -75,8 +75,8 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
-    customPivotPosition: {x: 0.5, y: 0.5}
+    defaultPivotAlignment: 9
+    customPivotPosition: {x: 0.5, y: 0.2}
     mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
@@ -88,8 +88,8 @@ ScriptedImporter:
     importHiddenLayers: 0
     layerImportMode: 1
     defaultPivotSpace: 0
-    defaultPivotAlignment: 7
-    customPivotPosition: {x: 0.5, y: 0.5}
+    defaultPivotAlignment: 9
+    customPivotPosition: {x: 0.5, y: 0.2}
     mosaicPadding: 4
     spritePadding: 0
     generateModelPrefab: 1
@@ -97,7 +97,7 @@ ScriptedImporter:
     addSortingGroup: 1
     addShadowCasters: 0
   importFileNodeState: 1
-  platformSettingsDirtyTick: 0
+  platformSettingsDirtyTick: 638813124627837725
   textureAssetName: 
   singleSpriteImportData:
   - name: 
@@ -123,7 +123,7 @@ ScriptedImporter:
   animatedSpriteImportData:
   - name: Slime_Frame_0
     originalName: 
-    pivot: {x: 0.43209875, y: 0}
+    pivot: {x: 0.43209875, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -143,7 +143,7 @@ ScriptedImporter:
     uvTransform: {x: 190, y: 76}
   - name: Slime_Frame_1
     originalName: 
-    pivot: {x: 0.38271606, y: 0.0625}
+    pivot: {x: 0.38271606, y: 0.53125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -163,7 +163,7 @@ ScriptedImporter:
     uvTransform: {x: 279, y: 76}
   - name: Slime_Frame_2
     originalName: 
-    pivot: {x: 0.4691358, y: -0.046875}
+    pivot: {x: 0.4691358, y: 0.42187503}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -183,7 +183,7 @@ ScriptedImporter:
     uvTransform: {x: 368, y: 76}
   - name: Slime_Frame_3
     originalName: 
-    pivot: {x: 0.5432099, y: -0.109375}
+    pivot: {x: 0.5432099, y: 0.359375}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -203,7 +203,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 148}
   - name: Slime_Frame_4
     originalName: 
-    pivot: {x: 0.7037037, y: -0.046875}
+    pivot: {x: 0.7037037, y: 0.42187503}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -223,7 +223,7 @@ ScriptedImporter:
     uvTransform: {x: 93, y: 148}
   - name: Slime_Frame_5
     originalName: 
-    pivot: {x: 0.8214286, y: 0.0625}
+    pivot: {x: 0.8214286, y: 0.53125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -243,7 +243,7 @@ ScriptedImporter:
     uvTransform: {x: 98, y: 76}
   - name: Slime_Frame_6
     originalName: 
-    pivot: {x: 0.88888884, y: 0}
+    pivot: {x: 0.88888884, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -263,7 +263,7 @@ ScriptedImporter:
     uvTransform: {x: 182, y: 148}
   - name: Slime_Frame_7
     originalName: 
-    pivot: {x: 0.43209875, y: 0}
+    pivot: {x: 0.43209875, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -283,7 +283,7 @@ ScriptedImporter:
     uvTransform: {x: 271, y: 148}
   - name: Slime_Frame_8
     originalName: 
-    pivot: {x: 0.49425286, y: -0.03125}
+    pivot: {x: 0.49425286, y: 0.4375}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -303,7 +303,7 @@ ScriptedImporter:
     uvTransform: {x: 416, y: 4}
   - name: Slime_Frame_9
     originalName: 
-    pivot: {x: 0.63265306, y: -0.140625}
+    pivot: {x: 0.63265306, y: 0.328125}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -323,7 +323,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 4}
   - name: Slime_Frame_10
     originalName: 
-    pivot: {x: 0.57731956, y: -0.09375}
+    pivot: {x: 0.57731956, y: 0.375}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -343,7 +343,7 @@ ScriptedImporter:
     uvTransform: {x: 110, y: 4}
   - name: Slime_Frame_11
     originalName: 
-    pivot: {x: 0.43023255, y: -0.015625}
+    pivot: {x: 0.43023255, y: 0.45312503}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -363,7 +363,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 76}
   - name: Slime_Frame_12
     originalName: 
-    pivot: {x: 0.37037033, y: 0.046875}
+    pivot: {x: 0.37037033, y: 0.515625}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -383,7 +383,7 @@ ScriptedImporter:
     uvTransform: {x: 360, y: 148}
   - name: Slime_Frame_13
     originalName: 
-    pivot: {x: 0.43209875, y: 0}
+    pivot: {x: 0.43209875, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -403,7 +403,7 @@ ScriptedImporter:
     uvTransform: {x: 4, y: 220}
   - name: Slime_Frame_14
     originalName: 
-    pivot: {x: 0.43209875, y: 0}
+    pivot: {x: 0.43209875, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -423,7 +423,7 @@ ScriptedImporter:
     uvTransform: {x: 93, y: 220}
   - name: Slime_Frame_15
     originalName: 
-    pivot: {x: 0.51578945, y: 0}
+    pivot: {x: 0.51578945, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -443,7 +443,7 @@ ScriptedImporter:
     uvTransform: {x: 215, y: 4}
   - name: Slime_Frame_16
     originalName: 
-    pivot: {x: 0.48888892, y: 0}
+    pivot: {x: 0.48888892, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -463,7 +463,7 @@ ScriptedImporter:
     uvTransform: {x: 318, y: 4}
   - name: Slime_Frame_17
     originalName: 
-    pivot: {x: 0.43209875, y: 0}
+    pivot: {x: 0.43209875, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -483,7 +483,7 @@ ScriptedImporter:
     uvTransform: {x: 182, y: 220}
   - name: Slime_Frame_18
     originalName: 
-    pivot: {x: 0.43209875, y: 0}
+    pivot: {x: 0.43209875, y: 0.46875}
     alignment: 9
     border: {x: 0, y: 0, z: 0, w: 0}
     rect:
@@ -664,7 +664,31 @@ ScriptedImporter:
       spriteId: 3b8a1c50eff6d15458d4aae2e35bf509
     linkedCells: []
     parentIndex: -1
-  platformSettings: []
+  platformSettings:
+  - name: DefaultTexturePlatform
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
+  - name: Standalone
+    overridden: 0
+    ignorePlatformSupport: 0
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    androidETC2FallbackOverride: 0
   generatePhysicsShape: 0
   secondarySpriteTextures: []
   spritePackingTag: 
