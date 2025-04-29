@@ -6,7 +6,7 @@ using UnityEngine;
 public class PlasmaBlast : MonoBehaviour
 {
     public int damage;
-    public float flySpeed;
+    public float flySpeed; //How fast the blast moves
 
     public void Init(int dmg)
     {
@@ -15,17 +15,15 @@ public class PlasmaBlast : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        Debug.Log("hit");
-        Debug.Log(other.tag);
         if(other.CompareTag("Enemy"))
         {
-            Debug.Log("Enemy shot");
+            //Deals damage when it hits enemy and then destroys it
             other.GetComponent<Enemy>().LoseHealth(damage);
-            Destroy(gameObject);
+            Destroy(gameObject); 
         }
         if(other.CompareTag("Destroy"))
         {
-            Destroy(gameObject);
+            Destroy(gameObject); //Destroys if it hits the zone at the end of the map 
         }
     }
 
@@ -36,6 +34,6 @@ public class PlasmaBlast : MonoBehaviour
 
     void FlyForward()
     {
-        transform.Translate(transform.right * flySpeed * Time.deltaTime);
+        transform.Translate(transform.right * flySpeed * Time.deltaTime); //Moves the blast to the right
     }
 }

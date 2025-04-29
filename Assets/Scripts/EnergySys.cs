@@ -20,6 +20,7 @@ public class EnergySys : MonoBehaviour
 
     public void Gain(int val)
     {
+        //Adds energy and updates UI
         energy += val;
         UpdateUI();
     }
@@ -28,6 +29,7 @@ public class EnergySys : MonoBehaviour
     {
         if (EnoughEnergy(val))
         {
+            //Subtracts cost from energy
             energy -= val;
             UpdateUI();
             return true;
@@ -41,6 +43,7 @@ public class EnergySys : MonoBehaviour
     public bool EnoughEnergy(int val)
     {
         if(val <= energy)
+        //Checks whether the player has enough for the tower
             return true;
         else
         {
@@ -49,6 +52,7 @@ public class EnergySys : MonoBehaviour
     }
     void UpdateUI()
     {
+        //Updates the energy display
         energyText.text = energy.ToString();
     }
 }

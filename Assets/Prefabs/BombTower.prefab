@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 2506957823063084902}
   - component: {fileID: 6929518515428828842}
   - component: {fileID: -5164985296920235906}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: BombTower
   m_TagString: Tower
   m_Icon: {fileID: 0}
@@ -172,3 +172,4 @@ MonoBehaviour:
   interval: 0
   actionVal: 1000
   buyCooldown: 25
+  explosion: {fileID: 429162353462890282, guid: 88af0f58ef2d8eb4db4d5910df327565, type: 3}

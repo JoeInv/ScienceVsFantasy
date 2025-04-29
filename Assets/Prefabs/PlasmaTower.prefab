@@ -100,10 +100,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 100
   cost: 100
+  cellPos: {x: 0, y: 0, z: 0}
+  tilemap: {fileID: 0}
   interval: 3
   actionVal: 25
   buyCooldown: 5
   blastPrefab: {fileID: 7258158632378624546, guid: 22696e04ab5fc7548a58e0fdae151ab8, type: 3}
+  detectRange: 100
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!61 &46377637209063570
 BoxCollider2D:
   m_ObjectHideFlags: 0

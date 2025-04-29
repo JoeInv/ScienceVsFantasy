@@ -7,6 +7,7 @@ public class LaserBlast : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
+        //If the laser hits an enemy it instantly destroys it
         if (collision.CompareTag("Enemy"))
         {
             Destroy(collision.gameObject);

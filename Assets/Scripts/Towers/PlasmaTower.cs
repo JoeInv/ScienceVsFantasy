@@ -5,12 +5,15 @@ using UnityEngine;
 public class PlasmaTower : Towers
 {
     public GameObject blastPrefab;
+    public float detectRange = 20f;
+    public LayerMask enemyMask;
+    private Coroutine shoot;
     void Start()
     {
         cost = 100;
         actionVal = 25;
         interval = 3f;
-        StartCoroutine(ShootDelay());
+        shoot = StartCoroutine(ShootDelay());
     }
 
     IEnumerator ShootDelay()
@@ -18,8 +21,25 @@ public class PlasmaTower : Towers
         while (true)
         {
             yield return new WaitForSeconds(interval);
-            ShootItem();
+            if (InRange())
+            //If enemy is in lane then the tower can shoot
+                ShootItem();
+            
         }
+    }
+
+    bool InRange()
+    {
+        //If there is an enemy in the lane then the plasma tower will shoot at it
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.right, detectRange, enemyMask);;
+        if (hit.collider != null)
+        {
+            if (hit.collider.CompareTag("Enemy"))
+            {
+                return true;
+            }
+        }
+        return false;
     }
 
     void ShootItem()

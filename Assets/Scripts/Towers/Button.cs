@@ -23,27 +23,23 @@ public class Button : MonoBehaviour
     {
        if (isDeactivated)
         return;
-
+        //When an enemy touches the button it activates the laser and deactivates the button
         if (collision.CompareTag("Enemy"))
         {
-            Debug.Log("Activated");
             SoundManager.instance.ButtonActivated();
             spriteRenderer.sprite = deactivated;
             isDeactivated = true;
             StartCoroutine(ActivateLaser());
-            Debug.Log("Laser Run");
         }
     }
 
     IEnumerator ActivateLaser()
     {
+        //Runs the laser and then destroys it
         Vector3 laserSpawn = transform.position + new Vector3(4f, 0f, 0f);
-        Debug.Log("Coords locked");
         laser = Instantiate(laserPrefab, laserSpawn, Quaternion.identity);
-        Debug.Log("Fired");
         SoundManager.instance.CrazyLaser();
         yield return new WaitForSeconds(duration);
         Destroy(laser);
-
     }
 }

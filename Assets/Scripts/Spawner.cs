@@ -89,6 +89,7 @@ public class Spawner : MonoBehaviour
 
     void SpawnTower(Vector3 position)
     {
+        //Places the tower where the player clicks after they selected it
         GameObject tower = Instantiate(towerPrefabs[spawnID], spawnTower);
         tower.transform.position = position;
         Vector3Int cellPos = spawnTilemap.WorldToCell(position);
@@ -111,6 +112,7 @@ public class Spawner : MonoBehaviour
     }
     public void SelectTower(int id)
     {
+        //Selects whatever tower the player clicked on
         DeselectTower();
         spawnID = id;
         SoundManager.instance.TowerSelect();

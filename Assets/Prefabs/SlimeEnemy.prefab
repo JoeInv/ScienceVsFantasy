@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: -4823979509845983161}
   - component: {fileID: -2680682441278574634}
   - component: {fileID: 5048247816578913926}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SlimeEnemy
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -124,7 +124,7 @@ MonoBehaviour:
   attackInterval: 4
   health: 50
   damage: 10
-  speed: 0.4
+  speed: 0.35
 --- !u!61 &-2680682441278574634
 BoxCollider2D:
   m_ObjectHideFlags: 0

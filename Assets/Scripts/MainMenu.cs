@@ -9,7 +9,6 @@ public class MainMenu : MonoBehaviour
     public GameObject levelSelect;
     public GameObject settingsMenu;
     public SoundManager soundManager;
-    public string currentLevel = "LevelOne";
 
     public void LevelSelect()
     {
@@ -44,7 +43,6 @@ public class MainMenu : MonoBehaviour
     public void LoadLevel(string sceneName)
     {
         soundManager.TowerSelect();
-        currentLevel = sceneName;
         SceneManager.LoadScene(sceneName);
     }
 }

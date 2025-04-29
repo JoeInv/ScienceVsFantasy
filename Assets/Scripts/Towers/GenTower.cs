@@ -14,6 +14,7 @@ public class GenTower : Towers
 
     IEnumerator Interval()
     {
+        //Generates energy based on the interval
         while (true)
         {
         yield return new WaitForSeconds(interval);

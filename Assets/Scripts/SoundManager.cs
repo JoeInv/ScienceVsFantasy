@@ -10,7 +10,7 @@ public class SoundManager : MonoBehaviour
     public AudioSource sfxSource;
     public AudioSource musicSource;
 
-    //Sound Clips
+    //Audio Clips
     public AudioClip plasmaTowerShoot;
     public AudioClip energyGenerated;
     public AudioClip towerSelect;
@@ -19,6 +19,7 @@ public class SoundManager : MonoBehaviour
     public AudioClip crazyLaser;
     public AudioClip towerHit;
     public AudioClip enemySpawned;
+    public AudioClip bombBlast;
 
     void Awake()
     {
@@ -32,6 +33,7 @@ public class SoundManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    //The Mute Buttons for sound and music
     public void MuteSFX()
     {
         sfxSource.mute = !sfxSource.mute;
@@ -42,6 +44,7 @@ public class SoundManager : MonoBehaviour
         musicSource.mute = !musicSource.mute;
         TowerSelect();
     }
+    //All of the sounds being played below
     public void PlasmaBlast()
     {
         sfxSource.PlayOneShot(plasmaTowerShoot, 0.15f);
@@ -78,6 +81,11 @@ public class SoundManager : MonoBehaviour
     public void ButtonActivated()
     {
         sfxSource.PlayOneShot(buttonActivated, 0.4f);
+    }
+
+    public void BombBlast()
+    {
+        sfxSource.PlayOneShot(bombBlast, 0.8f);
     }
     
 }

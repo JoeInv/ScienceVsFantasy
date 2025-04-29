@@ -5,6 +5,7 @@ using UnityEngine.Tilemaps;
 
 public class Towers : MonoBehaviour
 {
+    //Parent class for Towers
     public int health = 50;
     public int cost;
 
@@ -15,10 +16,12 @@ public class Towers : MonoBehaviour
     public float buyCooldown = 10f;
     public virtual bool LoseHealth(int val)
     {
+        //If a tower gets hit they lose the health and play a sound
         health -= val;
         SoundManager.instance.TowerHit();
         if(health<= 0)
         {
+            //When a tower is destroyed the tile is reset
             RestoreTile();
             Destroy(gameObject);
             return true;

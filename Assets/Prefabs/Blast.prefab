@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1323547062181063924}
   - component: {fileID: 3868042078937590227}
   - component: {fileID: -2175176426551117190}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Blast
   m_TagString: Untagged
   m_Icon: {fileID: 0}

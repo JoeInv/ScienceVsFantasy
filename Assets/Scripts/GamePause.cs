@@ -30,4 +30,16 @@ public class GamePause : MonoBehaviour
             SceneManager.LoadScene("MainMenu");
         }
     }
+    public void Retry()
+    {
+        //Resets game and reloads scene
+        Time.timeScale = 1f;
+        if (GameManager.instance != null)
+            Destroy(GameManager.instance.gameObject);
+        if (SoundManager.instance != null)
+            Destroy(SoundManager.instance.gameObject);
+        EnemySpawner.instance = null;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
 }
