@@ -100,10 +100,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7461521537a0da9479124f75cadce8a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackInterval: 10
+  attackInterval: 7
   health: 200
   damage: 50
   speed: 0.1
+  gameOver: 0
 --- !u!95 &4099615885265898169
 Animator:
   serializedVersion: 5
