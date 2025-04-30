@@ -56,6 +56,13 @@ public class MainMenu : MonoBehaviour
     public void LoadLevel(string sceneName)
     {
         soundManager.TowerSelect();
+        //Resets game and loads scene
+        Time.timeScale = 1f;
+        if (GameManager.instance != null)
+            Destroy(GameManager.instance.gameObject);
+        if (SoundManager.instance != null)
+            Destroy(SoundManager.instance.gameObject);
+        EnemySpawner.instance = null;
         SceneManager.LoadScene(sceneName);
     }
 }
