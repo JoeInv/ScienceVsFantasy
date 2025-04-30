@@ -899,11 +899,11 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 2092938978}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 1, y: 0}
-  m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -13, y: 0}
+  m_AnchorMin: {x: 1, y: 0.5}
+  m_AnchorMax: {x: 1, y: 0.5}
+  m_AnchoredPosition: {x: -18.600006, y: -19}
   m_SizeDelta: {x: 0.1666565, y: 0.96354675}
-  m_Pivot: {x: 1, y: 0}
+  m_Pivot: {x: 1, y: 0.5}
 --- !u!1 &221254608
 GameObject:
   m_ObjectHideFlags: 0
@@ -1073,7 +1073,7 @@ GameObject:
   - component: {fileID: 294169429}
   m_Layer: 0
   m_Name: DestroyEnemies
-  m_TagString: Die
+  m_TagString: Lose
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2488,6 +2488,7 @@ MonoBehaviour:
   crazyLaser: {fileID: 8300000, guid: 73d16b669fd946a47ad683dd2ef8e8b8, type: 3}
   towerHit: {fileID: 8300000, guid: bd26579331efea948afb7c9e2f1a7e57, type: 3}
   enemySpawned: {fileID: 8300000, guid: 28a8042fba46a5b40bdc28ba2d3a1c3a, type: 3}
+  bombBlast: {fileID: 0}
 --- !u!4 &535190107
 Transform:
   m_ObjectHideFlags: 0
