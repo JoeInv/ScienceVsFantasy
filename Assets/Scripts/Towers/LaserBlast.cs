@@ -10,6 +10,7 @@ public class LaserBlast : MonoBehaviour
         //If the laser hits an enemy it instantly destroys it
         if (collision.CompareTag("Enemy"))
         {
+            EnemySpawner.instance.EnemyKilled();
             Destroy(collision.gameObject);
         }
     }
