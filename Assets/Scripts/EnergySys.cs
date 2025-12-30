@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using Unity.VisualScripting;
-using TMPro.EditorUtilities;
+//using TMPro.EditorUtilities;
 
 public class EnergySys : MonoBehaviour
 {
